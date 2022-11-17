@@ -9,7 +9,7 @@
  */
 public class alumno {
     
-    private string nombre, apellido, especialidad,grupo;
+    private string nombre,apellido,especialidad,grupo;
     private int grado;
 
     public alumno(string nombre, string apellido, string especialidad, string grupo, int grado) {
