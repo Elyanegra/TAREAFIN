@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -36,7 +39,7 @@ public class ventana3 extends javax.swing.JFrame {
         txtgrupo = new javax.swing.JTextField();
         txtgrado = new javax.swing.JTextField();
         txtespecialidad = new javax.swing.JTextField();
-        btnCerrar1 = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,12 +89,12 @@ public class ventana3 extends javax.swing.JFrame {
         txtespecialidad.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txtespecialidad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
-        btnCerrar1.setBackground(new java.awt.Color(204, 255, 204));
-        btnCerrar1.setFont(new java.awt.Font("Constantia", 1, 18)); // NOI18N
-        btnCerrar1.setText("ACEPTAR");
-        btnCerrar1.addActionListener(new java.awt.event.ActionListener() {
+        btnAceptar.setBackground(new java.awt.Color(204, 255, 204));
+        btnAceptar.setFont(new java.awt.Font("Constantia", 1, 18)); // NOI18N
+        btnAceptar.setText("ACEPTAR");
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrar1ActionPerformed(evt);
+                btnAceptarActionPerformed(evt);
             }
         });
 
@@ -122,7 +125,7 @@ public class ventana3 extends javax.swing.JFrame {
                         .addGap(0, 11, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnCerrar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(btnAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -155,18 +158,30 @@ public class ventana3 extends javax.swing.JFrame {
                     .addComponent(lblEspecialidad)
                     .addComponent(txtespecialidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(btnCerrar1)
+                .addComponent(btnAceptar)
                 .addGap(27, 27, 27))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnCerrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrar1ActionPerformed
-  ventana2 m = new ventana2();
-  m.setVisible(true);
-  this.setVisible(false);
-    }//GEN-LAST:event_btnCerrar1ActionPerformed
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
+
+        alumno alumno1 = new alumno();
+        alumno1.setNombre(txtnombre.getText());
+        alumno1.setApellido(txtapellido.getText());
+        alumno1.setGrupo(txtgrupo.getText());
+        alumno1.setGrado(txtgrado.getText());
+        alumno1.setEspecialidad(txtespecialidad.getText());
+
+        if ( txtnombre.getText().equals("") || txtapellido.getText().equals("") || txtgrupo.getText().equals("") || txtgrado.getText().equals("") || txtespecialidad.getText().equals("") ) {
+            JOptionPane.showMessageDialog(null,"Error, falta un dato!");
+        } else {
+            ventana2 m = new ventana2();
+            m.setVisible(true);
+            this.setVisible(false);
+        }
+    }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
    
@@ -208,7 +223,7 @@ public class ventana3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrar1;
+    private javax.swing.JButton btnAceptar;
     private javax.swing.JLabel lblApellidos;
     private javax.swing.JLabel lblEspecialidad;
     private javax.swing.JLabel lblGrupo;

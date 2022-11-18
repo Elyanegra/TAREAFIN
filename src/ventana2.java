@@ -12,14 +12,10 @@ public class ventana2 extends javax.swing.JFrame {
     /**
      * Creates new form ventana2
      */
-    
-    alumno num1 = new alumno();
-    alumno num2 = new alumno();
-    alumno num3 = new alumno();
+      
     public ventana2() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -117,11 +113,14 @@ public class ventana2 extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDasignaturaActionPerformed
 
     private void btnfichaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfichaActionPerformed
-       ventana5 v = new ventana5();
+      
+        
+        
+        ventana5 v = new ventana5();
   v.setVisible(true);
   this.setVisible(false);
   
-   
+     
   
     }//GEN-LAST:event_btnfichaActionPerformed
 
@@ -166,4 +165,8 @@ public class ventana2 extends javax.swing.JFrame {
     private javax.swing.JButton btnficha;
     private javax.swing.JLabel lbltoma;
     // End of variables declaration//GEN-END:variables
+
+    private string String(Object text) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

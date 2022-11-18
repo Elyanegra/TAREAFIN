@@ -9,58 +9,71 @@
  */
 public class alumno {
     
-    private string nombre,apellido,especialidad,grupo;
-    private int grado;
+    private String nombre,apellido,especialidad,grupo,grado,materia;
 
-    public alumno(string nombre, string apellido, string especialidad, string grupo, int grado) {
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
+    }
+
+    public alumno(String nombre) {
+        this.nombre = nombre;
+    }
+
+
+    public alumno(String nombre, String apellido, String especialidad, String grupo, String grado) {
         this.nombre = null;
         this.apellido = null;
         this.especialidad = null;
         this.grupo = null;
-        this.grado = 0;
+        this.grado = null;
     }
     private double c1,c2,c3;
 
     public alumno() {
     }
 
-    public string getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(string nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public string getApellido() {
+    public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(string apellido) {
+    public void setApellido(String apellido) {
         this.apellido = apellido;
     }
 
-    public string getEspecialidad() {
+    public String getEspecialidad() {
         return especialidad;
     }
 
-    public void setEspecialidad(string especialidad) {
+    public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
 
-    public string getGrupo() {
+    public String getGrupo() {
         return grupo;
     }
 
-    public void setGrupo(string grupo) {
+    public void setGrupo(String grupo) {
         this.grupo = grupo;
     }
 
-    public int getGrado() {
+    public String getGrado() {
         return grado;
     }
 
-    public void setGrado(int grado) {
+    public void setGrado(String grado) {
         this.grado = grado;
     }
 
@@ -91,8 +104,7 @@ public class alumno {
     public double promedio () { 
     return (c1+c2+c3)/3;
 
-        }
-}
+        }  
 
-     
+}
 

@@ -11,11 +11,12 @@ public class ventana5 extends javax.swing.JFrame {
 
     /**
      * Creates new form ventana5
-     */alumno objeto = new alumno
+     */
+    
     public ventana5() {
         initComponents();
     }
-
+alumno objeto = new alumno();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -31,7 +32,7 @@ public class ventana5 extends javax.swing.JFrame {
         txtmateria3 = new javax.swing.JTextField();
         txtcosto = new javax.swing.JTextField();
         txt0 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btbcer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,12 +61,12 @@ public class ventana5 extends javax.swing.JFrame {
         txt0.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt0.setText("Presentarce el dia 16 de Diciembre a las 13:00 horas,  salon D-4");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton1.setText("CERRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btbcer.setBackground(new java.awt.Color(0, 153, 153));
+        btbcer.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btbcer.setText("CERRAR");
+        btbcer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btbcerActionPerformed(evt);
             }
         });
 
@@ -80,7 +81,7 @@ public class ventana5 extends javax.swing.JFrame {
                         .addComponent(lbltitulillo)
                         .addGap(149, 149, 149))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btbcer)
                         .addGap(14, 14, 14))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(104, 104, 104)
@@ -108,18 +109,21 @@ public class ventana5 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txt0, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
+                .addComponent(btbcer)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btbcerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbcerActionPerformed
        autores k = new autores();
   k.setVisible(true);
   this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+  
+  
+ 
+    }//GEN-LAST:event_btbcerActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,7 +161,7 @@ public class ventana5 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btbcer;
     private javax.swing.JLabel lbltitulillo;
     private javax.swing.JTextField txt0;
     private javax.swing.JTextField txtcosto;
