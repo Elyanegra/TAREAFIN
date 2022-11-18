@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -153,8 +156,8 @@ public class ventana4 extends javax.swing.JFrame {
                             .addComponent(lblpar1)
                             .addComponent(txtcal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtcal2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtcal2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lblpar2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,11 +185,16 @@ public class ventana4 extends javax.swing.JFrame {
     }//GEN-LAST:event_txt6FocusGained
 
     private void btnres2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnres2ActionPerformed
-        ventana2 m = new ventana2();
-  m.setVisible(true);
-  this.setVisible(false);
+     alumno alumno1 = new alumno();
+     alumno1.setMateria(txtmateria.getText());
   
-   
+   if (txtmateria.getText().equals("") || txtcal1.getText().equals("") || txtcal2.getText().equals("") || txtCal3.getText().equals("") || txt6.getText().equals("") ){
+            JOptionPane.showMessageDialog(null,"Error, falta un dato!");
+        } else {
+            ventana2 m = new ventana2();
+            m.setVisible(true);
+            this.setVisible(false);
+        }
     }//GEN-LAST:event_btnres2ActionPerformed
 
     /**
